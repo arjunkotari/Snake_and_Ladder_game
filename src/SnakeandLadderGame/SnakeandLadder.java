@@ -10,6 +10,8 @@ public class SnakeandLadder {
 		int rollDie = (int) (1 + Math.floor(Math.random() * 10) % 6);
 		System.out.println("Role die " + rollDie);
 		int snake,lader;
+		int count=0;
+//		int rollDie = 6;
 		Scanner sc = new Scanner(System.in);
 		if (rollDie == 6) {
 			System.out.println("Your game start now...");
@@ -20,6 +22,7 @@ public class SnakeandLadder {
 			{
 				System.out.println("Press Enter to die roll ");
 				sc.nextLine();
+				count++;
 				rollDie = (int) (1 + Math.floor(Math.random() * 10) % 6);
 				System.out.println("Role die " + rollDie);
 				player1 += rollDie;
@@ -47,6 +50,7 @@ public class SnakeandLadder {
 					player1 -= rollDie;	
 			}
 		}
+		System.out.println("Total dies Count: "+count);
 		sc.close();
 	}
 
